@@ -16,7 +16,7 @@ burgermeister operator-=(burgermeister& Krusty, const float money)
     return Krusty;
 }
     
-int burgermeister::getMontHold()
+int burgermeister::getMontHold()const
 {
   return m_montHold;	
 }

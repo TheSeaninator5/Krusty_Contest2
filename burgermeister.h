@@ -37,7 +37,7 @@ class burgermeister
 	//Desc: gets the montHold in the burgermeister 
 	//Pre:none
 	//Post: returned the montHold
-	int getMontHold();
+	int getMontHold()const;
 	
 };
 

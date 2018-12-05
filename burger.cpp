@@ -6,7 +6,7 @@
 using namespace std;
 
 //Burger Functions
-int burger::getburgCode()
+int burger::getburgCode()const
 {
   return m_burgCode;
 }
@@ -21,7 +21,7 @@ bool burger::setPattie(const int pattie)
   return ret;
 }
 
-int burger::getPattie()
+int burger::getPattie()const
 {
   return m_numPatties;
 }
@@ -37,7 +37,7 @@ bool burger::setBacon(const int bacon)
   return ret;
 }
 
-int burger::getBacon()
+int burger::getBacon()const
 {
   return m_numBacon;
 }
@@ -53,7 +53,7 @@ bool burger::setPickle(const int pickle)
   return ret;
 }
 
-int burger::getPickle()
+int burger::getPickle()const
 {
   return m_numPickles;
 }
@@ -64,7 +64,7 @@ bool burger::setCheese(const bool cheese)
   return cheese;
 }
 
-bool burger::getCheese()
+bool burger::getCheese()const
 {
   return m_hasCheese;
 }
@@ -75,7 +75,7 @@ bool burger::setSauce(const bool sauce)
   return sauce;
 }
 
-bool burger::getSauce()
+bool burger::getSauce()const
 {
   return m_hasSauce;
 }
@@ -86,17 +86,23 @@ bool burger::setPathogen(const bool pathogen)
   return pathogen;
 }
 
-bool burger::getPathogen()
+bool burger::getPathogen()const
 {
   return m_hasPathogen;
 }
 
-float burger::getPrice()
+float burger::getPrice()const
 {
   return m_price;
 }
 
-string burger::getburgName()
+string burger::getburgName()const
 {
   return m_burgName;
+}
+
+ostream &operator<<(ostream& os, burger b)
+{
+  os << b.getburgName();
+  return os;
 }

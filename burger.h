@@ -72,15 +72,15 @@ class burger
     //Desc: gets the name from the burger
     //Pre: none
     //Post: the namefrom the burger was returned
-    string getburgName();
+    string getburgName()const;
     //Desc: gets the burgCode from the burger
     //Pre: none
     //Post: the burgCode from the burger was returned
-    int getburgCode();
+    int getburgCode()const;
     //Desc: gets the num of patties from the burger
     //Pre: none
     //Post: the num of patties from the burger was returned
-    int getPattie();
+    int getPattie()const;
     //Desc: set the num of patties to the burger
     //Pre: none
     //Post: the num of patties is now given to the burger
@@ -88,7 +88,7 @@ class burger
     //Desc: gets the num of oz of bacon from the burger
     //Pre: none
     //Post: the num of oz of bacon from the burger was returned
-    int getBacon();
+    int getBacon()const;
     //Desc: set the num of bacon to the burger
     //Pre: none
     //Post: the num of oz of bacon is now given to the burger
@@ -96,7 +96,7 @@ class burger
     //Desc: gets the num of pickles from the burger
     //Pre: none
     //Post: the num of pickles from the burger was returned
-    int getPickle();
+    int getPickle()const;
     //Desc: set the num of pickles to the burger
     //Pre: none
     //Post: the num of pickles is now given to the burger
@@ -104,7 +104,7 @@ class burger
     //Desc: gets whether cheese is on the burger
     //Pre: none
     //Post: whether cheese is from the burger was returned
-    bool getCheese();
+    bool getCheese()const;
     //Desc: set whether there is cheese to the burger
     //Pre: none
     //Post: whether there is cheese is now given to the burger
@@ -112,7 +112,7 @@ class burger
     //Desc: gets whether sauce is on the burger
     //Pre: none
     //Post: whether sauce is from the burger was returned
-    bool getSauce();
+    bool getSauce()const;
     //Desc: set whether there is sauce to the burger
     //Pre: none
     //Post: whether there is sauce is now given to the burger
@@ -120,7 +120,7 @@ class burger
     //Desc: gets whether a pathogen is on the burger
     //Pre: none
     //Post: whether a pathogen is on the burger was returned
-    bool getPathogen();
+    bool getPathogen()const;
     //Desc: set whether there is a pathogen on the burger
     //Pre: none
     //Post: whether there is a pathogen is now given to the burger
@@ -128,7 +128,7 @@ class burger
     //Desc: gets the price from the burger
     //Pre: none
     //Post: the price of burger was returned
-    float getPrice();
+    float getPrice()const;
 };
 
 ostream &operator<<(ostream &stream, burger b);

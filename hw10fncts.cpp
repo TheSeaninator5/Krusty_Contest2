@@ -119,34 +119,7 @@ void getBurgNum(const int burgCode, int & pat, int & bac, int & pic)
 
 
 
-ostream &operator<<(ostream& os, burger b)
-{
-  os << b.getburgName();
-  return os;
-}
 
-ostream &operator<<(ostream& os, customer c)
-{
-  os << c.getName()<<" money: "<<c.getMoney() <<
-        "\n weight: "<<c.getWeight()<<" Cholesterol: "<<
-		c.getCholesterol() << " Health: "<<c.getHealth() <<
-		" Weight Gain: "<<c.getWeightGain()<<"\n roundsBurgNotEtn: "<<
-		c.getBurgNotEaten()<<" numBurgEtn: "<<c.getNumBurgEaten()<<" isContestant: ";
-		if(c.isContestant() == true)
-		{
-		  os<<" True ";	
-		}else
-		{
-		  os<<" False ";  	
-		}
-        if(c.getAlive() == true)
-        {
-        os<<" Is ALIVE";
-        }else
-         {
-         os<<" Is DEAD";
-         }
-  return os;
-}
+
 
 

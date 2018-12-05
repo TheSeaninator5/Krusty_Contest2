@@ -50,30 +50,30 @@ class customer
 	  m_burgEaten = 0;
 	  m_burgNotEaten = 0;
     }
-	//
-	//
-	//
-	int getNumBurgEaten();
-	//
-	//
-	//
-	int getBurgNotEaten();
-	//
-	//
-	//
-	float getWeightGain();
-    //
-    //
-    //
-    int getHealth();
+	//Desc: gets the number of burgers eaten
+	//Pre: none
+	//Post: returned the number of burgers eaten 
+	int getNumBurgEaten()const;
+	//Desc: gets the number of burgers not eaten
+    //Pre: none
+    //Post: returned the number of burgers not eaten 
+	int getBurgNotEaten()const;
+	//Desc: gets the ammount of weight gained by the customer
+    //Pre:
+    //Post: returned the ammount of weight gained by the customer 
+	float getWeightGain()const;
+    //Desc: gets the ammount of health a customer has
+    //Pre: none
+    //Post: returned the ammount of health a customer has
+    int getHealth()const;
     //Desc: gets the name of the customer
     //Pre: none
     //Post: the name of the customer was returned
-    string getName();
+    string getName()const;
     //Desc: gets the amount of money the from customer
     //Pre: none
     //Post: the amount of money the customer has was returned
-    float getMoney();
+    float getMoney()const;
     //Desc: set money to the customer
     //Pre: none
     //Post: the money is now given to the customer
@@ -81,7 +81,7 @@ class customer
     //Desc: gets the weight of the customer
     //Pre: none
     //Post: the weight of the customer was returned
-    float getWeight();
+    float getWeight()const;
     //Desc: set the weight to the customer
     //Pre: none
     //Post: the weight is now given to the customer
@@ -89,7 +89,7 @@ class customer
     //Desc: gets the cholesterol of the customer
     //Pre: none
     //Post: the cholesterol of the customer was returned
-    short getCholesterol();
+    short getCholesterol()const;
     //Desc: set the cholesterol to the customer
     //Pre: none
     //Post: the cholesterol is now given to the customer
@@ -97,7 +97,7 @@ class customer
     //Desc: gets the aliveness of the customer
     //Pre: none
     //Post: the aliveness of the customer was returned
-    bool getAlive();
+    bool getAlive()const;
     //Desc: set the aliveness to the customer
     //Pre: none
     //Post: the aliveness is now given to the customer
@@ -105,7 +105,7 @@ class customer
 	//Desc: return if customer is still contestant
     //Pre: none
     //Post: returned the customers contestant participation
-	bool isContestant();
+	bool isContestant()const;
     //Desc: Will remove money, increase cholesterol, increase weight,
     //if a pathagen is present then will kill the customer
     //Pre: Customer must be alive

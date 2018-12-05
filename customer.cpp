@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string customer::getName()
+string customer::getName()const
 {
   return m_name;
 }
@@ -22,7 +22,7 @@ bool customer::setMoney(const float money)
   return ret;
 }
 
-float customer::getMoney()
+float customer::getMoney()const
 {
   return m_money;
 }
@@ -38,7 +38,7 @@ bool customer::setWeight(const float weight)
   return ret;
 }
 
-float customer::getWeight()
+float customer::getWeight()const
 {
   return m_weight;
 }
@@ -54,7 +54,7 @@ bool customer::setCholesterol(const short chol)
   return ret;
 }
 
-short customer::getCholesterol()
+short customer::getCholesterol()const
 {
   return m_cholesterol;
 }
@@ -65,7 +65,7 @@ bool customer::setAlive(const bool alive)
   return alive;
 }
 
-bool customer::getAlive()
+bool customer::getAlive()const
 {
   return m_alive;
 }
@@ -77,26 +77,26 @@ void customer::payDeath(burgermeister& krusty)
   }
   return;  
 }
-bool customer::isContestant()
+bool customer::isContestant()const
 {
   return m_isContestant;
 }
 
-float customer::getWeightGain()
+float customer::getWeightGain()const
 {
   return m_weightGain;	
 }
 
-int customer::getHealth()
+int customer::getHealth()const
 {
   return m_health;	
 }
 
-int customer::getBurgNotEaten()
+int customer::getBurgNotEaten()const
 {
   return m_burgNotEaten;
 }
-int customer::getNumBurgEaten()
+int customer::getNumBurgEaten()const
 {
   return m_burgEaten;
 }
@@ -364,4 +364,27 @@ int findWinner(customer contest[], burgermeister& krusty)
 	end_loop = 1;
   }
   return end_loop;
+}
+ostream &operator<<(ostream& os, customer c)
+{
+  os << c.getName()<<" money: "<<c.getMoney() <<
+        "\n weight: "<<c.getWeight()<<" Cholesterol: "<<
+		c.getCholesterol() << " Health: "<<c.getHealth() <<
+		" Weight Gain: "<<c.getWeightGain()<<"\n roundsBurgNotEtn: "<<
+		c.getBurgNotEaten()<<" numBurgEtn: "<<c.getNumBurgEaten()<<" isContestant: ";
+		if(c.isContestant() == true)
+		{
+		  os<<" True ";	
+		}else
+		{
+		  os<<" False ";  	
+		}
+        if(c.getAlive() == true)
+        {
+        os<<" Is ALIVE";
+        }else
+         {
+         os<<" Is DEAD";
+         }
+  return os;
 }
